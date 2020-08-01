@@ -1,6 +1,8 @@
 <template>
-    <div class="nav">
-        <div class="logo">Logo</div>
+    <div class="nav container">
+        <div class="logo">
+          <img src="../assets/svg/logo.svg" alt="Tasty Resturants">
+        </div>
         <ul>
             <li>Login</li>
             <li>Register</li>
@@ -15,18 +17,25 @@ export default {
 </script>
 <style lang="scss" scoped>
   .nav {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
   }
   ul{
     margin: 0;
     padding: 0;
+    display: none;
 
     li {
       display: inline-block;
-      padding: 15px;
+      padding: 0 15px;
+    }
+  }
+  @media(min-width: 576px) {
+    ul {
+      display: unset;
     }
   }
 </style>
